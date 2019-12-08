@@ -1,6 +1,6 @@
-import { CounterActions } from '../../constants/counter';
+import { CounterActions, CounterFiltersList } from '../../constants/counter';
 
-export type TCounterActions = IIncreaseAction | IDecreaseAction | IResetAction;
+export type TCounterActions = IIncreaseAction | IDecreaseAction | IResetAction | ISetVisibilityFilter;
 
 interface IIncreaseAction {
   type: CounterActions.INCREASE;
@@ -14,4 +14,9 @@ interface IDecreaseAction {
 
 interface IResetAction {
   type: CounterActions.RESET;
+}
+
+interface ISetVisibilityFilter {
+  type: CounterActions.SET_VISIBILITY_FILTER;
+  filter: CounterFiltersList;
 }

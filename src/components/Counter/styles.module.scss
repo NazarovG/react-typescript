@@ -19,3 +19,20 @@
   margin-top: 10px;
   text-align: center;
 }
+
+.filters {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.filter {
+  margin-right: 15px;
+
+  input {
+    margin: 0 5px;
+  }
+}
+.filter:last-child {
+  margin-right: 0;
+}

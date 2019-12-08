@@ -1,5 +1,5 @@
 import { TCounterActions } from '../types/actions/counter';
-import { CounterActions } from '../constants/counter';
+import { CounterActions, CounterFiltersList } from '../constants/counter';
 
 export const increase = (value: number): TCounterActions => ({
   type: CounterActions.INCREASE,
@@ -13,4 +13,9 @@ export const decrease = (value: number): TCounterActions => ({
 
 export const reset = (): TCounterActions => ({
   type: CounterActions.RESET,
+});
+
+export const setVisibilityFilter = (filter: CounterFiltersList): TCounterActions => ({
+  type: CounterActions.SET_VISIBILITY_FILTER,
+  filter,
 });

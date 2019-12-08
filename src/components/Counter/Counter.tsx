@@ -21,7 +21,7 @@ const Counter = ({ count, handleIncrease, handleDecrease, handleReset }: TProps)
       <button type="button" onClick={() => handleIncrease(1)}>
         Increase
       </button>
-      <button type="button" onClick={() => handleDecrease(1)}>
+      <button type="button" onClick={() => handleDecrease(-1)}>
         Decrease
       </button>
       <button type="button" onClick={handleReset}>
