@@ -1,5 +1,5 @@
 import { TCounterActions } from '../types/actions/counter';
-import { ICounterState } from '../types/store/counter';
+import { ICounterState } from '../types/reducers/counter';
 import { CounterActions, CounterFiltersList } from '../constants/counter';
 
 const initialState: ICounterState = {
