@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-import Counter, { IStateProps, IActionProps } from '../components/Counter/Counter';
-import { getCount } from '../selectors/counter';
-import { increase, reset, decrease } from '../actions/counter';
-import { IStoreState } from '../types/store';
+import { increase, reset, decrease } from '@actions/counter';
+import Counter, { IStateProps, IActionProps } from '@components/Counter/Counter';
+import { getCount } from '@selectors/counter';
 
 const mapStateToProps = (state: IStoreState): IStateProps => ({
   count: getCount(state),

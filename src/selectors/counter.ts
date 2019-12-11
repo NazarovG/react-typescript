@@ -1,6 +1,5 @@
 import { createSelector } from 'reselect';
-import { IStoreState } from '../types/store';
-import { CounterFiltersList } from '../constants/counter';
+import { CounterFiltersList } from '@constants/counter';
 
 const getHistory = (state: IStoreState) => state.counter.history;
 

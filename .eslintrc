@@ -1,5 +1,11 @@
 {
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true },
+    "warnOnUnsupportedTypeScriptVersion": true
+  },
   "env": {
     "es6": true,
     "browser": true,
@@ -9,6 +15,7 @@
     "airbnb",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:import/typescript",
     "prettier",
     "prettier/@typescript-eslint",
     "prettier/react"
@@ -39,14 +46,8 @@
     "@typescript-eslint/no-unused-vars": "error",
     "no-useless-constructor": "off",
     "@typescript-eslint/no-useless-constructor": "error",
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "ts": "never",
-        "tsx": "never"
-      }
-    ]
+    "import/extensions": 0,
+    "import/no-unresolved": 0
   },
-  "plugins": ["prettier", "react", "jsx-a11y", "react-hooks", "@typescript-eslint/eslint-plugin"]
+  "plugins": ["prettier", "import", "react", "jsx-a11y", "react-hooks", "@typescript-eslint/eslint-plugin"]
 }

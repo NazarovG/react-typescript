@@ -17,8 +17,19 @@
     "noImplicitThis": true,
     "strictNullChecks": true,
     "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@actions/*": ["src/actions/*"],
+      "@components/*": ["src/components/*"],
+      "@constants/*": ["src/constants/*"],
+      "@containers/*": ["src/containers/*"],
+      "@pages/*": ["src/pages/*"],
+      "@reducers/*": ["src/reducers/*"],
+      "@selectors/*": ["src/selectors/*"]
+    }
   },
-  "exclude": ["node_modules", "dist"],
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

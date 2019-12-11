@@ -1,5 +1,4 @@
-import { TCounterActions } from '../types/actions/counter';
-import { CounterActions, CounterFiltersList } from '../constants/counter';
+import { CounterActions, CounterFiltersList } from '@constants/counter';
 
 export const increase = (value: number): TCounterActions => ({
   type: CounterActions.INCREASE,

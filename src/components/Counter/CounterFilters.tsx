@@ -1,5 +1,5 @@
 import React from 'react';
-import { CounterFiltersList } from '../../constants/counter';
+import { CounterFiltersList } from '@constants/counter';
 import styles from './styles.module.scss';
 
 export interface IStateProps {
