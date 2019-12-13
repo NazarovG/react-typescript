@@ -77,6 +77,12 @@ module.exports = {
             },
           },
           {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: isDevelopment,
+            },
+          },
+          {
             loader: 'sass-loader',
             options: {
               sourceMap: isDevelopment,
@@ -117,18 +123,6 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               sourceMap: isDevelopment,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              context: path.resolve(__dirname, 'src'),
-              name: '[path][name].[ext]',
             },
           },
         ],
@@ -178,10 +172,6 @@ module.exports = {
       {
         from: path.resolve(__dirname, 'src/static/'),
         to: path.resolve(__dirname, 'dist/'),
-      },
-      {
-        from: path.resolve(__dirname, 'src/assets/fonts/'),
-        to: path.resolve(__dirname, 'dist/assets/fonts/'),
       },
       {
         from: path.resolve(__dirname, 'src/assets/img/'),
