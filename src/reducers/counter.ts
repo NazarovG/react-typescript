@@ -1,4 +1,4 @@
-import { CounterActions, CounterFiltersList } from '@constants/counter';
+import { CounterActionTypes, CounterFiltersList } from '@constants/counter';
 
 const initialState: ICounterState = {
   count: 0,
@@ -14,15 +14,15 @@ const changeCount = (state: ICounterState, value: number) => {
   };
 };
 
-export const counter = (state = initialState, action: TCounterActions): ICounterState => {
+export const counter = (state = initialState, action: TCounterAction): ICounterState => {
   switch (action.type) {
-    case CounterActions.INCREASE:
+    case CounterActionTypes.INCREASE:
       return { ...state, ...changeCount(state, action.value) };
-    case CounterActions.DECREASE:
+    case CounterActionTypes.DECREASE:
       return { ...state, ...changeCount(state, action.value) };
-    case CounterActions.RESET:
+    case CounterActionTypes.RESET:
       return initialState;
-    case CounterActions.SET_VISIBILITY_FILTER:
+    case CounterActionTypes.SET_VISIBILITY_FILTER:
       return { ...state, filter: action.filter };
     default:
       return state;

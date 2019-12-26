@@ -1,20 +1,20 @@
-type TCounterActions = IIncreaseAction | IDecreaseAction | IResetAction | ISetVisibilityFilter;
+type TCounterAction = IIncreaseAction | IDecreaseAction | IResetAction | ISetVisibilityFilter;
 
 interface IIncreaseAction {
-  type: import('@constants/counter').CounterActions.INCREASE;
+  type: import('@constants/counter').CounterActionTypes.INCREASE;
   value: number;
 }
 
 interface IDecreaseAction {
-  type: import('@constants/counter').CounterActions.DECREASE;
+  type: import('@constants/counter').CounterActionTypes.DECREASE;
   value: number;
 }
 
 interface IResetAction {
-  type: import('@constants/counter').CounterActions.RESET;
+  type: import('@constants/counter').CounterActionTypes.RESET;
 }
 
 interface ISetVisibilityFilter {
-  type: import('@constants/counter').CounterActions.SET_VISIBILITY_FILTER;
+  type: import('@constants/counter').CounterActionTypes.SET_VISIBILITY_FILTER;
   filter: import('@constants/counter').CounterFiltersList;
 }

@@ -1,4 +1,4 @@
-export enum CounterActions {
+export enum CounterActionTypes {
   INCREASE = 'INCREASE',
   DECREASE = 'DECREASE',
   RESET = 'RESET',

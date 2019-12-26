@@ -18,17 +18,17 @@
     "strictNullChecks": true,
     "rootDir": "./src",
     "outDir": "./dist",
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "typeRoots": ["./node_modules/@types", "./src/types/**/*"],
     "paths": {
-      "@src/*": ["src/*"],
-      "@actions/*": ["src/actions/*"],
-      "@components/*": ["src/components/*"],
-      "@constants/*": ["src/constants/*"],
-      "@containers/*": ["src/containers/*"],
-      "@pages/*": ["src/pages/*"],
-      "@reducers/*": ["src/reducers/*"],
-      "@selectors/*": ["src/selectors/*"]
+      "@src/*": ["./*"],
+      "@actions/*": ["./actions/*"],
+      "@components/*": ["./components/*"],
+      "@constants/*": ["./constants/*"],
+      "@containers/*": ["./containers/*"],
+      "@pages/*": ["./pages/*"],
+      "@reducers/*": ["./reducers/*"],
+      "@selectors/*": ["./selectors/*"]
     }
   },
   "include": ["src"],
